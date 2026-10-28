@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Gasa Formation - Institut</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">
+            <img src="images/1.jpg" alt="Logo GASA Formation">
+            <div class="nav-logo-texte">
+                <span>GASA Formation</span>
+                <small>UATM — Bénin</small>
+            </div>
+        </div>
+
+        <button id="hamburger" aria-label="Menu" aria-expanded="false">
+            <span class="barre"></span>
+            <span class="barre"></span>
+            <span class="barre"></span>
+        </button>
+
+        <ul class="nav-liens">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#facultes">Facultés</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+            <li><a href="#recherche">Recherche</a></li>
+            <li><a href="#hebergement">Hébergement</a></li>
+            <li><a href="#actualites">Actualités</a></li>
+        </ul>
+    </nav>
+
+    <section id="accueil" class="accueil">
+
+        <p class="accueil-slogan">UATM GASA Formation — Le générateur d'avenir</p>
+ 
+        <h1 class="accueil-titre">Bienvenue à GASA Formation</h1>
+ 
+        <p class="accueil-description">
+            Université africaine de technologie et de management.
+            Nous formons les leaders et professionnels de demain
+            grâce à des filières agréées par l'État béninois.
+        </p>
+ 
+        <div class="accueil-boutons">
+            <a href="#admissions" class="btn-principal">Candidater maintenant</a>
+ 
+            <a href="#facultes" class="btn-secondaire">Découvrir nos filières</a>
+        </div>
+ 
+        <div class="accueil-stats">
+ 
+            <div class="stat-carte">
+                <strong>+23</strong>
+                <p>Filières agréées par l'État</p>
+            </div>
+ 
+            <div class="stat-carte">
+                <strong>+2000</strong>
+                <p>Étudiants inscrits</p>
+            </div>
+ 
+            <div class="stat-carte">
+                <strong>+30 ans</strong>
+                <p>D'expérience</p>
+            </div>
+ 
+            <div class="stat-carte">
+                <strong>85%</strong>
+                <p>Taux d'insertion professionnelle</p>
+            </div>
+ 
+        </div>
+
+    </section>
+
+    <section id="facultes" class="facultes">
+
+        <h2 class="section-titre">Nos Facultés & Filières</h2>
+ 
+        <p>
+            GASA Formation propose 23 filières agréées par l'État,
+            réparties en 4 UFR, pour des formations de niveau Licence et Master.
+        </p>
+ 
+ 
+        <div class="ufr-bloc">
+            <h3 class="ufr-titre">UFR Sciences et Techniques</h3>
+            <p>Licence et Master</p>
+ 
+            <div class="filiere-carte">
+                <h4>Réseaux Informatique et Télécom</h4>
+                <p>Niveau : Licence — Master</p>
+                <p>
+                    Réseaux LAN/WAN, protocoles IP, fibre optique,
+                    VPN, cloud computing, sécurité des réseaux.
+                </p>
+            </div>
+ 
+            <div class="filiere-carte">
+                <h4>Système Industriel</h4>
+                <p>Niveau : Licence — Master</p>
+                <p>
+                    Électrotechnique, automates programmables, robotique
+                    industrielle, SCADA, mécatronique, domotique.
+                </p>
+            </div>
+ 
+            <div class="filiere-carte">
+                <h4>Biotechnologie</h4>
+                <p>Niveau : Licence — Master</p>
+                <p>
+                    Industrie agroalimentaire, chimie et contrôle de qualité,
+                    microbiologie, sécurité sanitaire, normes ISO.
+                </p>
+            </div>
+ 
+            <div class="filiere-carte">
+                <h4>Système Informatique et Logiciel (SIL)</h4>
+                <p>Niveau : Licence — Master</p>
+                <p>
+                    Développement logiciel, bases de données, systèmes
+                    d'exploitation, cloud computing, sécurité informatique.
+                </p>
+            </div>
+ 
+            <div class="filiere-carte">
+                <h4>Génie Électrique et Énergie Renouvelable</h4>
+                <p>Niveau : Licence — Master</p>
+                <p>
+                    Électrotechnique, énergie solaire photovoltaïque,
+                    éolien, smart grid, transition énergétique.
+                </p>
+            </div>
+ 
+            <div class="filiere-carte">
+                <h4>Froid et Climatisation</h4>
+                <p>Niveau : Licence — Master</p>
+                <p>
+                    Thermodynamique, réfrigération, climatisation,
+                    froid industriel, pompe à chaleur, performance énergétique.
+                </p>
+            </div>
+ 
+            <div class="filiere-carte">
+                <h4>Informatique Industrielle & Maintenance</h4>
+                <p>Niveau : Licence — Master</p>
+                <p>
+                    Automatique, réseaux industriels, SCADA, robotique,
+                    GMAO, électronique de puissance, capteurs.
+                </p>
+            </div>
+ 
+            <div class="filiere-carte">
+                <h4>Sécurité Informatique</h4>
+                <p>Niveau : Licence — Master</p>
+                <p>
+                    Cryptographie, audit, cybersécurité, test de vulnérabilité,
+                    analyse de malwares, développement sécurisé.
+                </p>
+            </div>
+ 
+        </div>
+ 
+ 
+        <div class="ufr-bloc">
+            <h3 class="ufr-titre">UFR Sciences Agronomiques</h3>
+            <p>Licence et Master</p>
+ 
+            <div class="filiere-carte">
+                <h4>Production Animale</h4>
+                <p>Niveau : Licence — Master</p>
+                <p>
+                    Élevage durable, nutrition animale, zootechnie,
+                    santé animale, reproduction, systèmes d'élevage tropicaux.
+                </p>
+            </div>
+ 
+            <div class="filiere-carte">
+                <h4>Production Végétale</h4>
+                <p>Niveau : Licence — Master</p>
+                <p>
+                    Agriculture durable, fertilité des sols, irrigation,
+                    agroécologie, protection des plantes, machinisme agricole.
+                </p>
+            </div>
+ 
+            <div class="filiere-carte">
+                <h4>Agro-économie</h4>
+                <p>Niveau : Licence — Master</p>
+                <p>
+                    Économie rurale, gestion des exploitations agricoles,
+                    marketing agricole, politique alimentaire, statistiques.
+                </p>
+            </div>
+ 
+        </div>
+ 
+ 
+        <div class="ufr-bloc">
+            <h3 class="ufr-titre">UFR Sciences de Gestion</h3>
+            <p>Licence et Master</p>
+ 
+            <div class="filiere-carte">
+                <h4>Marketing, Communication et Commerce</h4>
+                <p>Niveau : Licence — Master</p>
+                <p>
+                    Stratégie marketing, communication d'entreprise,
+                    études de marché, négociation commerciale, branding.
+                </p>
+            </div>
+ 
+            <div class="filiere-carte">
+                <h4>Finance, Comptabilité et Audit</h4>
+                <p>Niveau : Licence — Master</p>
+                <p>
+                    Comptabilité financière, audit, contrôle de gestion,
+                    normes SYSCOHADA, fiscalité, gestion des risques.
+                </p>
+            </div>
+ 
+            <div class="filiere-carte">
+                <h4>Banque, Finance et Assurance</h4>
+                <p>Niveau : Licence — Master</p>
+                <p>
+                    Système bancaire, marchés financiers, assurance,
+                    gestion de portefeuille, réglementation financière.
+                </p>
+            </div>
+ 
+            <div class="filiere-carte">
+                <h4>Management des Ressources Humaines</h4>
+                <p>Niveau : Licence — Master</p>
+                <p>
+                    Recrutement, gestion de carrières, paie,
+                    gestion administrative du personnel, droit social.
+                </p>
+            </div>
+ 
+            <div class="filiere-carte">
+                <h4>Transport et Logistique</h4>
+                <p>Niveau : Licence — Master</p>
+                <p>
+                    Chaîne d'approvisionnement, gestion des stocks,
+                    logistique internationale, douanes, traçabilité.
+                </p>
+            </div>
+ 
+            <div class="filiere-carte">
+                <h4>Entrepreneuriat et Gestion des Projets</h4>
+                <p>Niveau : Licence — Master</p>
+                <p>
+                    Création d'entreprise, business plan, financement,
+                    gestion des risques, planification stratégique.
+                </p>
+            </div>
+ 
+            <div class="filiere-carte">
+                <h4>Marketing Digital</h4>
+                <p>Niveau : Licence — Master</p>
+                <p>
+                    SEO, SEA, réseaux sociaux, UX/UI design,
+                    web analytics, e-mailing, création de contenu digital.
+                </p>
+            </div>
+ 
+        </div>
+ 
+ 
+        <div class="ufr-bloc">
+            <h3 class="ufr-titre">UFR Sciences Juridiques et Politiques</h3>
+            <p>Licence et Master</p>
+ 
+            <div class="filiere-carte">
+                <h4>Science Juridique</h4>
+                <p>Niveau : Licence — Master</p>
+                <p>
+                    Droit civil, droit pénal, droit des affaires,
+                    droit international, droit du travail, rédaction d'actes.
+                </p>
+            </div>
+ 
+            <div class="filiere-carte">
+                <h4>Communication et Relations Internationales</h4>
+                <p>Niveau : Licence — Master</p>
+                <p>
+                    Diplomatie, relations internationales, journalisme,
+                    géopolitique, communication politique, langues étrangères.
+                </p>
+            </div>
+ 
+        </div>
+
+    </section>
+
+    <section id="admissions" class="admissions">
+
+        <h2 class="section-titre">Admissions</h2>
+ 
+        <p>
+            Rejoignez GASA Formation et intégrez l'une de nos 23 filières
+            agréées par l'État béninois. Le processus d'admission est simple
+            et ouvert à tous les bacheliers.
+        </p>
+ 
+ 
+        <div class="admissions-etapes">
+            <h3 class="sous-titre">Les étapes pour s'inscrire</h3>
+            <div class="etapes-grille">
+
+            <div class="etape-carte">
+                <strong>Étape 1</strong>
+                <h4>Choisir sa filière</h4>
+                <p>
+                    Consultez nos 23 filières disponibles et choisissez
+                    celle qui correspond à votre projet professionnel.
+                </p>
+            </div>
+ 
+            <div class="etape-carte">
+                <strong>Étape 2</strong>
+                <h4>Constituer le dossier</h4>
+                <p>
+                    Rassemblez les documents suivants :
+                    relevés de notes, diplôme du baccalauréat,
+                    photo d'identité et lettre de motivation.
+                </p>
+            </div>
+ 
+            <div class="etape-carte">
+                <strong>Étape 3</strong>
+                <h4>Déposer le dossier</h4>
+                <p>
+                    Remettez votre dossier complet au secrétariat de
+                    GASA Formation dans l'un de nos centre — ou envoyez-le par email
+                    à info@uatm-gasa.com.
+                </p>
+            </div>
+ 
+            <div class="etape-carte">
+                <strong>Étape 4</strong>
+                <h4>Entretien de sélection</h4>
+                <p>
+                    Un entretien de motivation est organisé pour
+                    valider votre orientation et confirmer votre
+                    intégration dans la filière choisie.
+                </p>
+            </div>
+ 
+            <div class="etape-carte">
+                <strong>Étape 5</strong>
+                <h4>Inscription définitive</h4>
+                <p>
+                    Après acceptation de votre dossier, procédez
+                    au paiement des frais d'inscription pour finaliser
+                    votre intégration à GASA Formation.
+                </p>
+            </div>
+ 
+            </div>
+        </div>
+ 
+ 
+        <div class="admissions-conditions">
+            <h3 class="sous-titre">Conditions d'admission</h3>
+ 
+            <ul>
+                <li>Être titulaire du Baccalauréat ou d'un diplôme équivalent reconnu par l'État</li>
+                <li>Dossier complet déposé dans les délais impartis</li>
+                <li>Toutes nationalités acceptées — étudiants de la CEDEAO bienvenus</li>
+                <li>Des dispositions spéciales existent pour les reprises d'études et les professionnels</li>
+                <li>Paiement des frais de dossier non remboursables</li>
+            </ul>
+ 
+        </div>
+ 
+ 
+ 
+        <div class="admissions-contact">
+            <h3 class="sous-titre">Contact — Service des admissions</h3>
+            <p>Téléphone : (229) 01 00 00 00 00</p>
+            <p>Email : info@uatm-gasa.com</p>
+            <p>Adresse : 2ème rue à gauche après le CEG Gbégamey, Cotonou, Bénin</p>
+        </div>
+
+    </section>
+
+    <section id="recherche" class="recherche">
+
+        <h2 class="section-titre">Recherche</h2>
+ 
+        <p>
+            GASA Formation encourage la recherche scientifique appliquée
+            au service du développement du Bénin et de l'Afrique de l'Ouest.
+            Nos laboratoires et centres de recherche travaillent sur des
+            problématiques concrètes liées aux réalités locales.
+        </p>
+ 
+ 
+        <div class="recherche-grille">
+
+        <div class="labo-carte">
+            <h3 class="labo-titre">Laboratoire Numérique et Systèmes Informatiques</h3>
+            <p>UFR Sciences et Techniques</p>
+            <p>
+                Ce laboratoire mène des travaux sur la transformation numérique,
+                la cybersécurité, le développement logiciel et les systèmes
+                embarqués. Il accompagne les étudiants dans la réalisation
+                de projets innovants adaptés aux besoins des entreprises béninoises.
+            </p>
+            <ul>
+                <li>Développement d'applications web et mobiles</li>
+                <li>Cybersécurité et protection des systèmes d'information</li>
+                <li>Réseaux informatiques et télécommunications</li>
+                <li>Intelligence artificielle et automatisation</li>
+            </ul>
+        </div>
+ 
+ 
+        <div class="labo-carte">
+            <h3 class="labo-titre">Centre de Recherche en Énergies et Systèmes Industriels</h3>
+            <p>UFR Sciences et Techniques</p>
+            <p>
+                Ce centre travaille sur les solutions énergétiques durables
+                adaptées au contexte béninois, notamment l'énergie solaire,
+                les systèmes industriels automatisés et la maintenance
+                des équipements électriques.
+            </p>
+            <ul>
+                <li>Énergie solaire photovoltaïque et éolienne</li>
+                <li>Automatisation et robotique industrielle</li>
+                <li>Froid industriel et climatisation</li>
+                <li>Maintenance préventive et prédictive</li>
+            </ul>
+        </div>
+ 
+ 
+        <div class="labo-carte">
+            <h3 class="labo-titre">Institut de Recherche en Agronomie et Développement Rural</h3>
+            <p>UFR Sciences Agronomiques</p>
+            <p>
+                Cet institut conduit des recherches sur l'agriculture durable,
+                la sécurité alimentaire et le développement des filières
+                agricoles au Bénin. Il collabore avec les acteurs locaux
+                pour améliorer les pratiques agricoles et les rendements.
+            </p>
+            <ul>
+                <li>Agriculture durable et agroécologie</li>
+                <li>Production animale et végétale tropicale</li>
+                <li>Sécurité alimentaire et transformation agroalimentaire</li>
+                <li>Économie rurale et développement local</li>
+            </ul>
+        </div>
+ 
+ 
+        <div class="labo-carte">
+            <h3 class="labo-titre">Centre d'Études en Gestion et Entrepreneuriat</h3>
+            <p>UFR Sciences de Gestion</p>
+            <p>
+                Ce centre se consacre à l'étude de l'écosystème entrepreneurial
+                béninois, au financement des PME et au développement du
+                commerce en Afrique de l'Ouest. Il soutient les initiatives
+                étudiantes et les projets d'innovation sociale.
+            </p>
+            <ul>
+                <li>Entrepreneuriat et création d'entreprises</li>
+                <li>Marketing digital et commerce en ligne</li>
+                <li>Finance, audit et gestion des risques</li>
+                <li>Logistique et commerce international</li>
+            </ul>
+        </div>
+ 
+ 
+        <div class="labo-carte">
+            <h3 class="labo-titre">Centre de Recherche Juridique et Relations Internationales</h3>
+            <p>UFR Sciences Juridiques et Politiques</p>
+            <p>
+                Ce centre analyse les évolutions du droit des affaires en
+                Afrique, le droit OHADA, les relations diplomatiques et
+                la communication internationale. Il publie des travaux
+                sur la gouvernance et les politiques publiques au Bénin.
+            </p>
+            <ul>
+                <li>Droit des affaires et droit OHADA</li>
+                <li>Relations internationales et diplomatie</li>
+                <li>Gouvernance et politiques publiques</li>
+                <li>Communication et médias internationaux</li>
+            </ul>
+        </div>
+ 
+        </div>
+
+    </section>
+
+    <section id="hebergement" class="hebergement">
+
+        <h2 class="section-titre">Hébergement</h2>
+ 
+        <p>
+            GASA Formation accompagne ses étudiants dans leur vie quotidienne
+            en proposant des solutions d'hébergement adaptées à chaque besoin.
+            Que vous veniez de Cotonou, de province ou de l'étranger,
+            nous avons une solution pour vous.
+        </p>
+ 
+ 
+        <div class="heb-logements">
+            <h3 class="sous-titre">Types de logement disponibles</h3>
+            <div class="heb-logements-grille">
+
+            <div class="heb-carte">
+                <h4 class="heb-carte-titre">Résidence Universitaire GASA</h4>
+                <p>
+                    Chambres simples et doubles situées directement sur le campus.
+                    Un cadre sécurisé et idéal pour se concentrer sur ses études.
+                </p>
+                <ul>
+                    <li>Chambre simple ou double</li>
+                    <li>Accès sécurisé 24h/24</li>
+                    <li>Wi-Fi disponible dans toutes les chambres</li>
+                    <li>Salles d'étude communes</li>
+                    <li>Réfectoire sur place</li>
+                </ul>
+            </div>
+ 
+            <div class="heb-carte">
+                <h4 class="heb-carte-titre">Studios Meublés Partenaires</h4>
+                <p>
+                    Des studios meublés situés à proximité du campus,
+                    sélectionnés et labellisés par GASA Formation.
+                    Idéal pour les étudiants souhaitant plus d'autonomie.
+                </p>
+                <ul>
+                    <li>Studios entièrement meublés</li>
+                    <li>Situés à moins de 15 minutes du campus</li>
+                    <li>Sélectionnés et contrôlés par l'université</li>
+                    <li>Accès aux services du campus</li>
+                </ul>
+            </div>
+ 
+            </div>
+        </div>
+ 
+ 
+        <div class="heb-services">
+            <h3 class="sous-titre">Services disponibles sur le campus</h3>
+            <div class="heb-services-grille">
+
+            <div class="service-carte">
+                <strong>Wi-Fi</strong>
+                <p>Connexion internet disponible dans toutes les zones du campus, y compris les résidences.</p>
+            </div>
+ 
+            <div class="service-carte">
+                <strong>Restauration</strong>
+                <p>Un réfectoire propose des repas équilibrés midi et soir du lundi au vendredi.</p>
+            </div>
+ 
+            <div class="service-carte">
+                <strong>Salles d'étude</strong>
+                <p>Des salles d'étude équipées sont accessibles aux étudiants résidents 24h/24.</p>
+            </div>
+ 
+            <div class="service-carte">
+                <strong>Sécurité</strong>
+                <p>Un service de sécurité assure la surveillance du campus et des résidences 24h/24 et 7j/7.</p>
+            </div>
+ 
+            </div>
+        </div>
+ 
+ 
+        <div class="heb-contact">
+            <h3 class="sous-titre">Demander un hébergement</h3>
+            <p>
+                Pour toute demande d'hébergement ou d'information sur les
+                logements disponibles, contactez le service concerné :
+            </p>
+            <p>Téléphone : (229) 01 65 78 77 21</p>
+            <p>Email : info@uatm-gasa.com</p>
+            <p>Adresse : 2ème rue à gauche après le CEG Gbégamey, Cotonou, Bénin</p>
+        </div>
+
+    </section>
+
+    <section id="actualites" class="actualites">
+
+        <h2 class="section-titre">Actualités</h2>
+ 
+        <p>
+            Restez informés des dernières nouvelles, événements
+            et opportunités de GASA Formation — UATM Bénin.
+        </p>
+ 
+ 
+        <div class="actualites-grille">
+
+        <div class="actu-carte">
+            <p>Mai 2026</p>
+            <h3>Cérémonie de remise des diplômes 2025-2026</h3>
+            <p>
+                Plus de 300 diplômés ont été célébrés lors de la cérémonie
+                annuelle de remise des diplômes de GASA Formation. Une journée
+                de fierté pour toute la communauté estudiantine, les familles
+                et le corps enseignant de l'institut.
+            </p>
+        </div>
+ 
+ 
+        <div class="actu-carte">
+            <p>Avril 2026</p>
+            <h3>Forum de l'entrepreneuriat jeune — édition 2026</h3>
+            <p>
+                GASA Formation a accueilli le Forum Jeunesse et Entrepreneuriat
+                avec la participation de plus de 30 startups béninoises et
+                des partenaires internationaux. Un événement qui confirme
+                l'engagement de l'institut pour l'insertion professionnelle
+                de ses étudiants.
+            </p>
+        </div>
+ 
+ 
+        <div class="actu-carte">
+            <p>Mars 2026</p>
+            <h3>Ouverture des inscriptions pour l'année 2026-2027</h3>
+            <p>
+                Les dossiers d'inscription pour la prochaine année académique
+                sont désormais ouverts. Les candidats intéressés sont invités
+                à se rapprocher du secrétariat ou à envoyer leur dossier
+                à info@uatm-gasa.com pour toute information complémentaire.
+            </p>
+        </div>
+ 
+ 
+        <div class="actu-carte">
+            <p>Février 2026</p>
+            <h3>Prix régional remporté par une équipe d'étudiants SIL</h3>
+            <p>
+                Une équipe d'étudiants de la filière Système Informatique
+                et Logiciel a remporté le prix régional de l'innovation
+                numérique pour leur application de gestion agricole destinée
+                aux petits producteurs béninois. Une fierté pour tout l'institut.
+            </p>
+        </div>
+ 
+ 
+        <div class="actu-carte">
+            <p>Janvier 2026</p>
+            <h3>Inauguration du nouveau laboratoire informatique</h3>
+            <p>
+                GASA Formation inaugure son nouveau laboratoire informatique
+                équipé de 50 nouvelles stations de travail, d'une salle de
+                serveurs et d'un espace de co-working pour les projets étudiants.
+                Un investissement majeur pour renforcer la qualité des formations
+                en Sciences et Techniques.
+            </p>
+        </div>
+ 
+ 
+        <div class="actu-carte">
+            <p>Décembre 2025</p>
+            <h3>Partenariat académique avec une université internationale</h3>
+            <p>
+                GASA Formation signe un accord de coopération académique
+                ouvrant la voie à des échanges d'enseignants, des programmes
+                de double diplôme et des opportunités de mobilité internationale
+                pour les étudiants de l'UATM au Bénin.
+            </p>
+        </div>
+ 
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="foot-cont">
+            <div class="foot-colonne">
+                <h4>GASA Formation</h4>
+                <p>UATM — Bénin<br>
+                2ème rue à gauche après le CEG Gbégamey, Cotonou</p>
+            </div>
+            <div class="foot-colonne">
+                <h4>Liens rapides</h4>
+                <a href="#accueil">Accueil</a>
+                <a href="#facultes">Facultés</a>
+                <a href="#admissions">Admissions</a>
+            </div>
+            <div class="foot-colonne">
+                <h4>Contact</h4>
+                <p>(229) 01 00 00 00 00</p>
+                <p>info@uatm-gasa.com</p>
+            </div>
+        </div>
+        <div class="foot-bouton">
+            &copy; 2026 GASA Formation — Tous droits réservés
+        </div>
+    </footer>
+
+
+</body>
+</html>

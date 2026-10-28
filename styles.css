@@ -1,0 +1,735 @@
+/* ============================================
+   1. ROOT — PALETTE DE COULEURS DU LOGO
+   ============================================ */
+:root {
+    --bleu-royal: #1A237E;       /* Bleu du cadre du bouclier */
+    --bleu-clair: #1565C0;       /* Dégradé du bleu */
+    --rouge-accent: #D32F2F;     /* Initiales rouges (A, etc.) */
+    --orange-lion: #E65100;      /* Couleur des lions */
+    --violet-aigle: #5E35B1;     /* Ailes de l'aigle */
+    --gris-ecusson: #E0E0E0;     /* Fond du bouclier */
+    --blanc-pure: #FFFFFF;
+    --noir-texte: #212121;
+    --ombre-douce: rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   2. STYLES GLOBAUX
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: var(--noir-texte);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    padding-top: 80px; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--bleu-royal);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ============================================
+   3. NAVIGATION
+   ============================================ */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: 80px;
+    background: var(--blanc-pure);
+    box-shadow: 0 2px 10px var(--ombre-douce);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet de défilement : Quand on descend, la nav devient plus sombre */
+nav.scrolled {
+    background-color: var(--bleu-royal);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+nav.scrolled .nav-logo-texte span,
+nav.scrolled .nav-logo-texte small,
+nav.scrolled .nav-liens a {
+    color: var(--blanc-pure);
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-logo img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-logo-texte {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-logo-texte span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--bleu-royal);
+}
+
+.nav-logo-texte small {
+    color: var(--rouge-accent);
+    font-weight: 600;
+}
+
+.nav-liens {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-liens a {
+    color: var(--noir-texte);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-liens a:hover,
+.nav-liens a.active {
+    color: var(--rouge-accent);
+}
+
+/* Petit trait sous le lien actif au hover */
+.nav-liens a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--bleu-royal);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-liens a:hover::after {
+    width: 80%;
+}
+
+/* ============================================
+   4. SECTIONS COMMUNES
+   ============================================ */
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.section-titre {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.section-titre::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: var(--orange-lion);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* ============================================
+   5. SECTION ACCUEIL
+   ============================================ */
+.accueil {
+    text-align: center;
+    background: linear-gradient(135deg, var(--gris-ecusson) 0%, #f0f0f0 100%);
+    border-radius: 15px;
+    padding: 4rem 2rem;
+    margin-top: 1rem;
+}
+
+.accueil-slogan {
+    font-size: 1.1rem;
+    color: var(--violet-aigle);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.accueil-titre {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.accueil-description {
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.1rem;
+}
+
+.accueil-boutons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.btn-principal {
+    background: var(--orange-lion);
+    color: var(--blanc-pure);
+    padding: 0.8rem 2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    border: 2px solid var(--orange-lion);
+    transition: 0.3s;
+}
+
+.btn-principal:hover {
+    background: transparent;
+    color: var(--orange-lion);
+}
+
+.btn-secondaire {
+    background: transparent;
+    border: 2px solid var(--bleu-royal);
+    color: var(--bleu-royal);
+    padding: 0.8rem 2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.btn-secondaire:hover {
+    background: var(--bleu-royal);
+    color: var(--blanc-pure);
+}
+
+.accueil-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.stat-carte {
+    background: var(--blanc-pure);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--ombre-douce);
+    border-top: 4px solid var(--bleu-royal);
+}
+
+.stat-carte strong {
+    display: block;
+    font-size: 2rem;
+    color: var(--rouge-accent);
+}
+
+/* ============================================
+   6. SECTION FACULTÉS & FILIÈRES
+   ============================================ */
+.ufr-bloc {
+    margin-bottom: 3rem;
+    background: var(--blanc-pure);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--ombre-douce);
+}
+
+.ufr-titre {
+    font-size: 1.8rem;
+    color: var(--violet-aigle);
+    margin-bottom: 0.5rem;
+    border-bottom: 3px solid var(--orange-lion);
+    padding-bottom: 0.5rem;
+}
+
+.filiere-carte {
+    background: #f9f9f9;
+    padding: 1rem;
+    margin: 0.8rem 0;
+    border-left: 5px solid var(--bleu-clair);
+    border-radius: 4px;
+}
+
+.filiere-carte h4 {
+    color: var(--bleu-royal);
+}
+
+.facultes > p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    color: var(--gris);
+}
+
+/* ============================================
+   7. SECTION ADMISSIONS
+   ============================================ */
+.admissions-etapes {
+    margin: 2rem 0;
+}
+ 
+.etapes-grille {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+}
+
+.etape-carte {
+    background: var(--blanc-pure);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px var(--ombre-douce);
+    text-align: center;
+    border-bottom: 4px solid var(--rouge-accent);
+}
+
+.etape-carte strong {
+    color: var(--orange-lion);
+    font-size: 1.2rem;
+}
+
+.admissions-conditions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.admissions-conditions li {
+    background: white;
+    margin: 0.5rem 0;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--violet-aigle);
+}
+
+.admissions-contact {
+    background: var(--bleu-royal);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.admissions-contact h3,
+.admissions-contact p {
+    color: white;
+}
+
+/* ============================================
+   8. SECTION RECHERCHE / LABOS
+   ============================================ */
+.recherche-grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.labo-carte {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px var(--ombre-douce);
+    border-top: 4px solid var(--bleu-clair);
+}
+
+.labo-carte h3 {
+    color: var(--violet-aigle);
+    font-size: 1.2rem;
+}
+
+.labo-carte ul {
+    margin-top: 0.8rem;
+    padding-left: 1.2rem;
+}
+
+.labo-carte li {
+    margin: 0.3rem 0;
+}
+
+.recherche > p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    color: var(--gris);
+}
+
+/* ============================================
+   9. SECTION HÉBERGEMENT
+   ============================================ */
+/* Titre des sous-sections en dehors des grilles */
+.heb-logements > .sous-titre,
+.heb-services > .sous-titre {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+ 
+/* Wrapper pour les 2 cartes logement */
+.heb-logements {
+    margin: 2rem 0;
+}
+ 
+.heb-logements .sous-titre {
+    margin-bottom: 1rem;
+}
+ 
+/* Grille 2 colonnes pour les cartes seulement */
+.heb-logements-grille {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+ 
+.heb-carte {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px var(--ombre-douce);
+    border-top: 4px solid var(--bleu-clair);
+}
+ 
+.heb-carte-titre {
+    color: var(--orange-lion);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+ 
+/* Services */
+.heb-services {
+    margin: 2rem 0;
+}
+ 
+.heb-services .sous-titre {
+    margin-bottom: 1rem;
+}
+ 
+.heb-services-grille {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+ 
+.service-carte {
+    background: var(--gris-ecusson);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+ 
+.heb-contact {
+    background: var(--bleu-royal);
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 2rem;
+}
+ 
+.heb-contact h3, .heb-contact p {
+    color: white;
+}
+
+/* ============================================
+   10. SECTION ACTUALITÉS
+   ============================================ */
+.actualites-grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.actu-carte {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px var(--ombre-douce);
+    border-left: 5px solid var(--rouge-accent);
+}
+
+.actu-carte h3 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.actualites > p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    color: var(--gris);
+}
+
+/*---------Pied de page---------*/
+
+footer {
+    background: var(--bleu-royal);
+    color: white;
+    padding: 3rem 2rem 1rem 2rem;
+    margin-top: 4rem;
+}
+.foot-cont {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    gap: 2rem;
+    padding: 0 2rem 2rem 2rem;
+}
+.foot-cont h4 {
+    color: white;
+    margin-bottom: 1rem;
+}
+.foot-cont a {
+    color: #cfd8dc;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+/* Titres des colonnes */
+.foot-colonne h4 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+/* Petit trait décoratif sous les titres */
+.foot-colonne h4::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: var(--orange-lion); 
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+/* Texte des colonnes */
+.foot-colonne p {
+    color: #cfd8dc;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 0.3rem;
+}
+
+/* Liens rapides (a) */
+.foot-colonne a {
+    display: block;
+    color: #cfd8dc;
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 0;
+}
+
+/* Effet au survol des liens */
+.foot-colonne a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+    transform: translateX(4px);
+}
+
+/* Contact (groupe de paragraphes) */
+.foot-colonne p:first-of-type {
+    margin-top: 0;
+}
+
+.foot-bouton {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+#hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+#hamburger .barre {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--bleu-royal);
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+nav.scrolled #hamburger .barre {
+    background-color: var(--blanc-pure);
+}
+
+/* ============================================
+   11. RESPONSIVE (Mobile)
+   ============================================ */
+@media (max-width: 900px) {
+    .etapes-grille {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+    nav {
+        height: auto;
+        flex-direction: column;
+        padding: 0.5rem 1rem;
+    }
+    .nav-logo img {
+        height: 40px;
+    }
+    .nav-liens {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--bleu-royal);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1rem 0;
+        gap: 0;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        z-index: 1000;
+        border-radius: 0 0 15px 15px;
+    }
+    .nav-liens.open {
+        display: flex;
+    }
+    .nav-liens li {
+        width: 100%;
+        text-align: center;
+    }
+    .nav-liens a {
+        color: var(--blanc-pure);
+        padding: 1rem;
+        display: block;
+        font-size: 1.1rem;
+    }
+    section {
+        padding: 2rem 1.5rem;
+    }
+    .accueil-titre {
+        font-size: 2.2rem;
+    }
+    .accueil {
+        padding: 2rem 1.5rem;
+    }
+    .ufr-bloc {
+        padding: 1rem;
+    }
+    .heb-logements-grille {
+        grid-template-columns: 1fr;
+    }
+    .heb-services-grille {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .foot-cont {
+        grid-template-columns: 1fr ;
+        text-align: center;
+        gap: 2.5rem;
+        padding: 0 1.5rem 2rem 1.5rem;
+    }
+    .foot-colonne h4::after {
+        margin: 8px auto 0 auto;
+    }
+    .foot-colonne a:hover {
+        transform: translateX(0); 
+        padding-left: 0;
+    }
+    #hamburger {
+        display: flex;
+        position: absolute;
+        right: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .nav-liens a:hover,
+    .nav-liens a.active {
+        color: var(--orange-lion);
+        background-color: rgba(255,255,255,0.1);
+    }
+
+    /* Supprimer le petit trait sous les liens sur mobile */
+    .nav-liens a::after {
+        display: none;
+    }
+
+    /* Animation du burger quand ouvert */
+    #hamburger[aria-expanded="true"] .barre:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    #hamburger[aria-expanded="true"] .barre:nth-child(2) {
+        opacity: 0;
+    }
+    #hamburger[aria-expanded="true"] .barre:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
+@media (max-width: 600px) {
+    .etapes-grille {
+        grid-template-columns: 1fr;
+    }
+    .etape-carte {
+        padding: 1rem;
+    }
+    .recherche-grille,
+    .actualites-grille {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .accueil-stats {
+        grid-template-columns: 1fr; 
+    }
+    .stat-carte {
+        padding: 1rem;
+    }
+    .heb-services-grille {
+        grid-template-columns: 1fr;
+    }
+}
